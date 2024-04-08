@@ -8,7 +8,5 @@ if len(Full_num) == 3:
     print(Amount_Num)
 elif len(Full_num) < 3:
     print('Это не 3х значное число.Код завершен')
-    SystemExit(1)
 else :
     print('Это не 3х значное число.Код завершен')
-    break
