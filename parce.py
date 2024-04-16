@@ -1,11 +1,8 @@
-import decimal
 import requests
-import time
 from bs4 import BeautifulSoup
-while True:
-    url = 'https://www.binance.com/ru/price/bitcoin'
-    page = requests.get(url)
-    soup = BeautifulSoup(page.text, "html.parser")
-    search_price = soup.find('div', class_='css-1bwgsh3').text[1:].replace(',', '')
-    search_price = decimal.Decimal(search_price)
-    print(f'Курс Bitcoin - {search_price}')
+while 1:
+    url_bit = 'https://www.binance.com/ru/price/bitcoin'
+    page_bit = requests.get(url_bit)
+    soup_bit = BeautifulSoup(page_bit.text, "html.parser")
+    search_price_bit = soup_bit.find('div', class_='css-1bwgsh3').text[1:].replace(',', '')
+    last_bit = float(search_price_bit)
