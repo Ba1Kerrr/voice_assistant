@@ -16,4 +16,18 @@ def Eth():
         soup_eth = BeautifulSoup(page_eth.text, "html.parser")
         search_price_eth = soup_eth.find('div', class_='css-dbxihu').text
         return search_price_eth
-print(Eth())
+def Usd():
+    while True:
+        url_usd = 'https://ru.investing.com/currencies/'
+        page_usd = requests.get(url_usd)
+        soup_usd = BeautifulSoup(page_usd.text,"html.parser")
+        search_price_usd = soup_usd.find('td', class_='pid-1-last').text
+        return search_price_usd
+def Usd():
+    while True:
+        url_usd = 'https://ru.investing.com/currencies/'
+        page_usd = requests.get(url_usd)
+        soup_usd = BeautifulSoup(page_usd.text,"html.parser")
+        search_price_usd = soup_usd.find('td', class_='pid-1-last').text
+        return 'EUR costs ' + search_price_usd + ' $'
+print(Usd())
