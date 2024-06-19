@@ -36,7 +36,8 @@ def comand_to_do(message):
     elif message in proschania:
         message_to_say(random.choice(proschania))
     elif "сколько время" in message:
-        print(datetime.now())
+        cur_time = str(datetime.datetime.now())[11:-7]
+        print(cur_time[0:2],'часов',cur_time[3:5],' минут',cur_time[6:8],' секунд',)
     else:
         message_to_say("я вас не понимаю")
     exit()
