@@ -1,3 +1,4 @@
+from voice_assistant.opening_files.proggs import proggs
 import subprocess
 import webbrowser
 #subprocess.Popen(r"C:\Users\Даниил\AppData\Roaming\.minecraft\TLauncher.exe")       #запуск майнкрафта
